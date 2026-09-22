@@ -1,0 +1,29 @@
+### 🚀 WordPress Theme Staging & Release Workflow
+
+We are working with a WordPress staging site connected via MCP (`novamira-meenamou-omegaforce`) and a local theme repository in this workspace.
+
+Please follow this strict 3-phase workflow for all tasks:
+
+---
+
+#### 1. Rapid Staging Iteration (Tokens & Speed Optimization)
+- Make all live code, styling (CSS/JS), template, and PHP edits **directly on the staging site** via MCP.
+- Do NOT modify local theme files or build `.zip` packages during back-and-forth iteration to minimize latency and token usage.
+- Inform me when changes are ready on staging so I can test and preview them live in the browser.
+
+---
+
+#### 2. Finalization on User Confirmation
+- When I say **"Finalize"**, **"Confirmed"**, or **"Looks good, create release"**:
+  1. **Sync Local Files**: Pull/update all modified files from staging into the local theme folder (`Meenamou Theme/`).
+  2. **Bump Version**: Increment the version number in `style.css` (e.g., `1.0.3` ➔ `1.0.4`).
+  3. **Sync Version to Staging**: Ensure `style.css` on staging reflects the new version number.
+
+---
+
+#### 3. Versioned Production Release Archive
+- Generate a new versioned zip file in the root directory (e.g., `meenamou-theme-v1.0.4.zip`) **without overwriting previous version zips** to maintain rollback history.
+- Update the default `meenamou-theme.zip` to match the latest build so it's always ready for production upload.
+
+---
+Let's begin. Acknowledge this workflow and let me know when you are ready for the first task.
